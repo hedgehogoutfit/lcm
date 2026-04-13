@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.env
+venv/
+task
+.idea/
+test_main.http

@@ -12,10 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install dependencies
+      - name: Enable Azure build
         run: |
-          pip install -r requirements.txt
-
+          echo "SCM_DO_BUILD_DURING_DEPLOYMENT=true" >> $GITHUB_ENV
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
